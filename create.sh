@@ -1,1 +1,1 @@
-docker exec -it redis-1 sh -c "redis-cli -a my_secure_password_123456 --cluster create redis-1:6379 redis-2:6379 redis-3:6379 redis-4:6379 redis-5:6379 redis-6:6379 --cluster-replicas 1"
+docker exec -it redis-1 sh -c "REDISCLI_AUTH=123456 redis-cli --cluster create 192.168.0.154:7001 192.168.0.154:7002 192.168.0.154:7003 192.168.0.154:7004 192.168.0.154:7005 192.168.0.154:7006 --cluster-replicas 1 --cluster-yes"
