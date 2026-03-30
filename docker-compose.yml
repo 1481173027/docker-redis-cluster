@@ -35,7 +35,7 @@ services:
       --cluster-enabled yes
       --cluster-config-file nodes.conf
       --cluster-node-timeout 5000
-      --cluster-announce-ip ${IPV4}
+      --cluster-announce-ip ${HOST}
       --cluster-announce-port 7001
       --cluster-announce-bus-port 17001
       --cluster-replica-no-failover yes
@@ -70,7 +70,7 @@ services:
       --cluster-enabled yes
       --cluster-config-file nodes.conf
       --cluster-node-timeout 5000
-      --cluster-announce-ip ${IPV4}
+      --cluster-announce-ip ${HOST}
       --cluster-announce-port 7002
       --cluster-announce-bus-port 17002
       --cluster-replica-no-failover yes
@@ -105,7 +105,7 @@ services:
       --cluster-enabled yes
       --cluster-config-file nodes.conf
       --cluster-node-timeout 5000
-      --cluster-announce-ip ${IPV4}
+      --cluster-announce-ip ${HOST}
       --cluster-announce-port 7003
       --cluster-announce-bus-port 17003
       --cluster-replica-no-failover yes
@@ -140,7 +140,7 @@ services:
       --cluster-enabled yes
       --cluster-config-file nodes.conf
       --cluster-node-timeout 5000
-      --cluster-announce-ip ${IPV4}
+      --cluster-announce-ip ${HOST}
       --cluster-announce-port 7004
       --cluster-announce-bus-port 17004
       --cluster-replica-no-failover yes
@@ -175,7 +175,7 @@ services:
       --cluster-enabled yes
       --cluster-config-file nodes.conf
       --cluster-node-timeout 5000
-      --cluster-announce-ip ${IPV4}
+      --cluster-announce-ip ${HOST}
       --cluster-announce-port 7005
       --cluster-announce-bus-port 17005
       --cluster-replica-no-failover yes
@@ -210,7 +210,7 @@ services:
       --cluster-enabled yes
       --cluster-config-file nodes.conf
       --cluster-node-timeout 5000
-      --cluster-announce-ip ${IPV4}
+      --cluster-announce-ip ${HOST}
       --cluster-announce-port 7006
       --cluster-announce-bus-port 17006
       --cluster-replica-no-failover yes
@@ -245,7 +245,7 @@ services:
       --cluster-enabled yes
       --cluster-config-file nodes.conf
       --cluster-node-timeout 5000
-      --cluster-announce-ip ${IPV4}
+      --cluster-announce-ip ${HOST}
       --cluster-announce-port 7007
       --cluster-announce-bus-port 17007
       --cluster-replica-no-failover yes
@@ -280,7 +280,7 @@ services:
       --cluster-enabled yes
       --cluster-config-file nodes.conf
       --cluster-node-timeout 5000
-      --cluster-announce-ip ${IPV4}
+      --cluster-announce-ip ${HOST}
       --cluster-announce-port 7008
       --cluster-announce-bus-port 17008
       --cluster-replica-no-failover yes
@@ -350,7 +350,7 @@ services:
       
       # 执行集群创建命令
       echo '正在创建Redis集群...'
-      redis-cli --cluster create "${IPV4}:7001" "${IPV4}:7002" "${IPV4}:7003" "${IPV4}:7004" "${IPV4}:7005" "${IPV4}:7006" --cluster-replicas 1 --cluster-yes -a "${REDIS_PASSWORD}"
+      redis-cli --cluster create "${HOST}:7001" "${HOST}:7002" "${HOST}:7003" "${HOST}:7004" "${HOST}:7005" "${HOST}:7006" --cluster-replicas 1 --cluster-yes -a "${REDIS_PASSWORD}"
       echo 'Redis集群创建完成！'
       exit 0
       "
